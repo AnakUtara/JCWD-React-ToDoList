@@ -27,8 +27,6 @@ export default function ListItem({ data, setState }) {
 					onChange={handleOnChecked}
 				/>
 				<label
-					htmlFor="todo"
-					name="to-do"
 					className={`grow text-xs md:text-base ${isDone && "line-through"}`}
 				>
 					{data.title}
