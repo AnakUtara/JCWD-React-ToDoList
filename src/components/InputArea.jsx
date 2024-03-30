@@ -3,9 +3,9 @@ export default function InputArea({ state, inputHandler, clickHandler }) {
 	const [newToDo, isInputEmpty] = state;
 	return (
 		<div className="grow">
-			<div className="flex items-center justify-between gap-2">
+			<div className="flex flex-wrap items-center justify-between gap-2">
 				<input
-					className="input input-md input-bordered grow font-gaba focus:input-info focus:outline-0 placeholder:text-sm"
+					className="input input-md max-[320px]:w-[80%] input-bordered grow font-gaba focus:input-info focus:outline-0 placeholder:text-sm"
 					placeholder={isInputEmpty ? "Got nothing to do?" : "Add To Do..."}
 					type="text"
 					name="title"
@@ -13,7 +13,7 @@ export default function InputArea({ state, inputHandler, clickHandler }) {
 					onChange={inputHandler}
 				/>
 				<button
-					className="btn btn-md btn-square btn-accent hover:bg-yellow-200"
+					className="btn btn-block btn-md sm:btn-square btn-accent hover:bg-yellow-200"
 					onClick={clickHandler}
 				>
 					<span className="material-symbols-outlined font-bold text-violet-950">
