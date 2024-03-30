@@ -22,11 +22,12 @@ export default function ListItem({ data, setState }) {
 					className="checkbox checkbox-md checkbox-success bg-base-300"
 					type="checkbox"
 					name="to-do"
-					id="todo"
+					id={data.id}
 					checked={isDone}
 					onChange={handleOnChecked}
 				/>
 				<label
+					htmlFor={data.id}
 					className={`grow text-xs md:text-base ${isDone && "line-through"}`}
 				>
 					{data.title}
