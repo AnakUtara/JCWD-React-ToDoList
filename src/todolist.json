@@ -1,0 +1,10 @@
+{
+	"toDo": [
+		{ "id": 1, "title": "Create Guest Experience for mobile check-in" },
+		{ "id": 2, "title": "Document current CI/CD process." },
+		{ "id": 3, "title": "Perform Code Review for final Pillow-Talk release" },
+		{ "id": 4, "title": "Implement new Color Palette from Design Team" },
+		{ "id": 5, "title": "Fix image uploading process for guest check-in" },
+		{ "id": 6, "title": "Provide on-boarding documentation" }
+	]
+}
