@@ -20,7 +20,8 @@ function App() {
 		setNewToDo(e.target.value);
 	}
 
-	function handleAddToDo() {
+	function handleAddToDo(e) {
+		e.preventDefault();
 		isListNotEmpty >= 0 &&
 			newToDo.length &&
 			setList([
@@ -52,7 +53,7 @@ function App() {
 										setIsInputEmpty(false);
 									}}
 									btnClass={
-										"fixed bottom-10 right-3 z-10 md:static md:flex items-center btn max-[425px]:btn-square btn-md btn-accent text-violet-950 hover:bg-yellow-200 shadow-sm shadow-black md:shadow-none"
+										"fixed bottom-10 right-3 z-10 md:static md:flex items-center btn max-[767px]:btn-square btn-md btn-accent text-violet-950 hover:bg-yellow-200 shadow-sm shadow-black md:shadow-none"
 									}
 									btnIcon={"add"}
 									btnIconClass={"material-symbols-outlined font-bold"}
@@ -61,12 +62,10 @@ function App() {
 									<InputArea
 										state={[newToDo, isInputEmpty]}
 										inputHandler={handleInput}
+										onSubmit={handleAddToDo}
 										isEdit={false}
 									>
-										<button
-											className="btn btn-block btn-md sm:btn-square btn-accent hover:bg-yellow-200"
-											onClick={handleAddToDo}
-										>
+										<button className="btn btn-block btn-md sm:btn-square btn-accent hover:bg-yellow-200">
 											<span className="material-symbols-outlined font-bold text-violet-950">
 												add
 											</span>

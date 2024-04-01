@@ -23,7 +23,8 @@ export default function ListItem({ data, setState }) {
 		setEdit(e.target.value);
 	}
 
-	function handleSubmitEdit() {
+	function handleSubmitEdit(e) {
+		e.preventDefault();
 		const tmp = [...list];
 		!edit.length ? setIsInputEmpty(true) : setIsInputEmpty(false);
 		const i = tmp.findIndex((item) => item.id === data.id);
@@ -74,12 +75,10 @@ export default function ListItem({ data, setState }) {
 						<InputArea
 							state={[edit, isInputEmpty]}
 							inputHandler={handleEdit}
+							onSubmit={handleSubmitEdit}
 							isEdit={true}
 						>
-							<button
-								className="btn btn-block btn-md sm:btn-square btn-secondary hover:bg-cyan-200"
-								onClick={handleSubmitEdit}
-							>
+							<button className="btn btn-block btn-md sm:btn-square btn-secondary hover:bg-cyan-200">
 								<span className="material-symbols-outlined font-light text-violet-950">
 									edit
 								</span>

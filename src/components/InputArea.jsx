@@ -3,12 +3,16 @@ export default function InputArea({
 	state,
 	inputHandler,
 	isEdit = false,
+	onSubmit,
 	children,
 }) {
 	const [newToDo, isInputEmpty] = state;
 	return (
 		<div className="grow">
-			<div className="flex flex-wrap items-center justify-between gap-2">
+			<form
+				className="flex flex-wrap items-center justify-between gap-2"
+				onSubmit={onSubmit}
+			>
 				{isEdit ? (
 					<input
 						className="input input-md max-[320px]:w-[80%] input-bordered grow font-gaba focus:input-info focus:outline-0 placeholder:text-sm"
@@ -31,7 +35,7 @@ export default function InputArea({
 					/>
 				)}
 				{children}
-			</div>
+			</form>
 		</div>
 	);
 }
