@@ -51,12 +51,27 @@ function App() {
 										setNewToDo("");
 										setIsInputEmpty(false);
 									}}
+									btnClass={
+										"fixed bottom-10 right-3 z-10 md:static md:flex items-center btn max-[425px]:btn-square btn-md btn-accent text-violet-950 hover:bg-yellow-200 shadow-sm shadow-black md:shadow-none"
+									}
+									btnIcon={"add"}
+									btnIconClass={"material-symbols-outlined font-bold"}
+									btnText={true}
 								>
 									<InputArea
 										state={[newToDo, isInputEmpty]}
 										inputHandler={handleInput}
-										clickHandler={handleAddToDo}
-									/>
+										isEdit={false}
+									>
+										<button
+											className="btn btn-block btn-md sm:btn-square btn-accent hover:bg-yellow-200"
+											onClick={handleAddToDo}
+										>
+											<span className="material-symbols-outlined font-bold text-violet-950">
+												add
+											</span>
+										</button>
+									</InputArea>
 								</Modal>
 							</div>
 						</Header>

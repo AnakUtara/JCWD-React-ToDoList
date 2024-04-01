@@ -1,16 +1,25 @@
 /* eslint-disable react/prop-types */
-export default function Modal({ id, title, children, modalFn }) {
+export default function Modal({
+	id,
+	title,
+	children,
+	modalFn,
+	btnClass,
+	btnIcon,
+	btnIconClass,
+	btnText = false,
+}) {
 	return (
 		<>
 			<button
-				className="fixed bottom-5 right-3 z-10 md:static md:flex items-center btn max-[425px]:btn-square btn-md btn-accent text-violet-950 hover:bg-yellow-200 shadow-sm shadow-black md:shadow-none"
+				className={btnClass}
 				onClick={() => {
-					document.getElementById("input-modal").showModal();
-					modalFn();
+					document.getElementById(id).showModal();
+					modalFn && modalFn();
 				}}
 			>
-				<h2 className="text-lg font-bold hidden md:block">New</h2>
-				<span className="material-symbols-outlined font-bold">add</span>
+				{btnText && <h2 className="text-lg font-bold hidden md:block">New</h2>}
+				<span className={btnIconClass}>{btnIcon}</span>
 			</button>
 			<dialog id={id} className="modal">
 				<div className="modal-box">
