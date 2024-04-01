@@ -17,7 +17,7 @@ export default function ListItem({ data, setState }) {
 
 	return (
 		<>
-			<li className="flex justify-between items-center gap-3 mt-5 first:mt-0">
+			<li className="flex justify-between items-center gap-3 mt-5 first:mt-0 last:mb-5">
 				<input
 					className="checkbox checkbox-md checkbox-success bg-base-300"
 					type="checkbox"

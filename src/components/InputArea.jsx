@@ -6,7 +6,9 @@ export default function InputArea({ state, inputHandler, clickHandler }) {
 			<div className="flex flex-wrap items-center justify-between gap-2">
 				<input
 					className="input input-md max-[320px]:w-[80%] input-bordered grow font-gaba focus:input-info focus:outline-0 placeholder:text-sm"
-					placeholder={isInputEmpty ? "Got nothing to do?" : "Add To Do..."}
+					placeholder={
+						isInputEmpty ? "Got nothing to do?" : "Add Something To Do..."
+					}
 					type="text"
 					name="title"
 					value={newToDo}
