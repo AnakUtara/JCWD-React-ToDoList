@@ -33,7 +33,7 @@ function App() {
 			]);
 		!newToDo.length ? setIsInputEmpty(true) : setIsInputEmpty(false);
 		setNewToDo("");
-		document.getElementById("input-modal").close();
+		newToDo.length && document.getElementById("input-modal").close();
 	}
 
 	return (
@@ -53,7 +53,7 @@ function App() {
 										setIsInputEmpty(false);
 									}}
 									btnClass={
-										"fixed bottom-20 right-5 z-10 md:static md:flex items-center btn max-[767px]:btn-square btn-md btn-accent text-violet-950 hover:bg-yellow-200 shadow-sm shadow-black md:shadow-none"
+										"fixed bottom-20 right-5 z-10 md:static md:flex items-center btn max-[767px]:btn-square btn-md btn-accent text-violet-950 hover:bg-yellow-200 shadow-md shadow-black md:shadow-none"
 									}
 									btnIcon={"add"}
 									btnIconClass={"material-symbols-outlined font-bold"}
