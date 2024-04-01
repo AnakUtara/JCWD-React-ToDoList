@@ -39,7 +39,7 @@ function App() {
 	return (
 		<>
 			<div className="max-w-[768px] mx-auto my-0">
-				<div className="flex flex-col items-center justify-center p-5 pt-0 text-white">
+				<div className="flex flex-col items-center justify-between p-5 pt-0 text-white">
 					<header className="w-full sticky top-0 bg-[#1a103d] mb-5">
 						<Separator margin="my-5" />
 						<Header logo={"Chores To Do List"}>
@@ -53,7 +53,7 @@ function App() {
 										setIsInputEmpty(false);
 									}}
 									btnClass={
-										"fixed bottom-10 right-3 z-10 md:static md:flex items-center btn max-[767px]:btn-square btn-md btn-accent text-violet-950 hover:bg-yellow-200 shadow-sm shadow-black md:shadow-none"
+										"fixed bottom-20 right-5 z-10 md:static md:flex items-center btn max-[767px]:btn-square btn-md btn-accent text-violet-950 hover:bg-yellow-200 shadow-sm shadow-black md:shadow-none"
 									}
 									btnIcon={"add"}
 									btnIconClass={"material-symbols-outlined font-bold"}
@@ -85,7 +85,6 @@ function App() {
 							/>
 						))}
 					</List>
-					<Separator />
 					<Footer>
 						<p>Copyright, Riady</p>
 						<p>&copy; {new Date().getFullYear()}</p>
